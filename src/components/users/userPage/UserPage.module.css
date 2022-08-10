@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.userContainer{
+    display: flex;
+    margin: 100px auto;
+    width: 500px;
+    padding: 20px;
+    background-color: rgb(153, 148, 148, .2);;
+    border-radius: 15px;
+    justify-content: space-between;
+    font-family: 'Times New Roman', Times, serif;
+}
+.userPhoto{
+    width: 250px;
+    height: 160px;   
+}
+.userName{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.colorText{
+    padding-right: 5px;
+    color: rgb(62, 49, 119);
+    font-weight: bold;
+}
+.button{
+    margin: 230px 0 0 10px;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(10, 3, 3);
+    color: white;
+    cursor: pointer;
+}
