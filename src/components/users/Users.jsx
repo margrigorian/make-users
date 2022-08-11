@@ -13,7 +13,7 @@ class Users extends React.Component{
 
     getUserId(info) {
         // console.log(info);
-        this.setState({info: info});
+        this.setState({info});
     }
 
     render() {

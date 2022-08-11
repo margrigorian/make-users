@@ -1,0 +1,26 @@
+*{
+    overflow: hidden;
+}
+.containerModal{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(43, 41, 41,0.8);
+    top: 0;   
+}
+.modalWindow{
+    margin: 120px auto;
+    overflow: auto;
+    width: 600px;
+    height: 410px;
+    padding: 40px 20px 0px 20px;
+    background-color: antiquewhite;
+}
+.close{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 50px;
+    right: 170px;
+    cursor: pointer;
+}

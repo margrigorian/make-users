@@ -1,0 +1,20 @@
+.commentContainer{
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 40px;
+}
+.email{
+    font-weight: bold;
+}
+.name{
+    color: rgb(9, 71, 105);
+}
+.commentText{
+    width: 400px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: rgb(9, 71, 105);
+    color: white;
+    font-size: 11px;
+}

@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header{
+    height: 320px;
+    background-image: url("https://mf-static-ssl.more.tv/images/Project/32776/OW1aHYGiS1Cg6TLY2Zs3LhXriUyZQ9yV0rvsfLXE.jpg");
+    background-size: 100%;
+    margin-bottom: 50px;
+}
+.headerText{
+    color: rgb(56, 129, 169);
+    font-size: 80px;
+    padding: 220px 0px 0px 950px;
+}
+.bigContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 50px 30px 50px;
+}
