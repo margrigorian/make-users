@@ -36,6 +36,12 @@ class AlbumsList extends React.Component{
         return(
             <div>
                 <div className={s.albumHead}>
+                    <div className={s.buttonContainer}>
+                        <div className={s.buttonUsersContainer}>
+                            <button className={`${s.button} ${s.buttonUsers}`} onClick={() => this.props.fnBackToUsers()}>USERS</button>
+                        </div>
+                        <button className={`${s.button} ${s.buttonBack}`} onClick={() => this.props.fnbackToUserPage()}>&#8666; BACK</button>
+                    </div>
                     <p className={s.headText}>ALBUM</p>
                 </div>
                 {

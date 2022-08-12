@@ -10,13 +10,40 @@
     margin-bottom: 50px;
 }
 .headerText{
+    position: absolute;
     color: rgb(56, 129, 169);
     font-size: 80px;
-    padding: 220px 0px 0px 950px;
+    /* padding: 220px 0px 0px 950px; */
+    top: 220px;
+    right: 50px;
 }
 .bigContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 50px 30px 50px;
+}
+
+.buttonContainer{
+    margin: 150px 0 0 50px;
+}
+.buttonUsersContainer{
+    margin-bottom: 10px;
+}
+.button{
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+.buttonUsers{
+    color: white;
+    background-color: rgb(56, 129, 169);
+    padding: 15px 30.5px;
+    border: none;
+}
+.buttonBack{
+    padding: 15px 24px;
+    color: rgb(56, 129, 169);
+    border: 1px solid rgb(56, 129, 169);
 }

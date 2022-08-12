@@ -16,11 +16,6 @@ class PostsList extends React.Component{
         this.showComments = this.showComments.bind(this);
         this.hideComments = this.hideComments.bind(this);
     }
-
-    // async componentDidMount() {
-    //     let comments = await request("GET", `https://jsonplaceholder.typicode.com/comments?postId=${this.props.posts[0].userId}`);
-    //     this.setState({...this.state, data: comments});
-    // }
     
     async showComments() {
         let comments = await request("GET", `https://jsonplaceholder.typicode.com/comments?postId=${this.props.posts[0].userId}`);
@@ -32,10 +27,15 @@ class PostsList extends React.Component{
     }
     
     render() {
-        console.log(this.props.posts);
         return (
             <div>
                 <div className={s.header}>
+                    <div className={s.buttonContainer}>
+                        <div className={s.buttonUsersContainer}>
+                            <button className={`${s.button} ${s.buttonUsers}`} onClick={() => this.props.fnBackToUsers()}>USERS</button>
+                        </div>
+                        <button className={`${s.button} ${s.buttonBack}`} onClick={() => this.props.fnBackToUserPage()}>&#8666; BACK</button>
+                    </div>
                     <p className={s.headerText}>POSTS</p>
                 </div>
                 <div className={s.bigContainer}>

@@ -1,6 +1,6 @@
 import React from "react";
-import request from "../../lib/request";
-import User from "./User";
+import request from "../../../lib/request";
+import User from "../user/User";
 import s from "./UsersList.module.css";
 
 class UsersList extends React.Component {

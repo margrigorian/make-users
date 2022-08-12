@@ -26,3 +26,26 @@
     justify-content: space-between;
 }
 
+.buttonContainer{
+    margin: 100px 0 0 30px;
+}
+.buttonUsersContainer{
+    margin-bottom: 10px;
+}
+.button{
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+.buttonUsers{
+    color: white;
+    background-color: darkred;
+    padding: 15px 30.5px;
+    border: none;
+}
+.buttonBack{
+    padding: 15px 24px;
+    color: darkred;
+    border: 1px solid darkred;
+}

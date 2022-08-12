@@ -1,5 +1,5 @@
 import React from "react";
-import UsersList from "./usersList/UsersList";
+import UsersList from "./userInfo/usersList/UsersList";
 import UserPage from "./userPage/UserPage";
 
 class Users extends React.Component{
@@ -9,17 +9,21 @@ class Users extends React.Component{
         this.state = {info: ""};
 
         this.getUserId = this.getUserId.bind(this);
+        this.comeBack = this.comeBack.bind(this);
     }
 
     getUserId(info) {
-        // console.log(info);
         this.setState({info});
+    }
+
+    comeBack() {
+        this.setState({info: ""});
     }
 
     render() {
         return (
             <div>
-                {this.state.info === "" ? <UsersList fn={this.getUserId} /> : <UserPage userInfo={this.state.info} />}
+                {this.state.info === "" ? <UsersList fn={this.getUserId} /> : <UserPage userInfo={this.state.info} fnComeBack={this.comeBack} />}
             </div>
         )
     }
