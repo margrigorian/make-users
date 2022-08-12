@@ -1,6 +1,7 @@
 import React from "react";
 import request from "../../lib/request";
 import PostsList from "../../posts/postsList/PostsList";
+import AlbumsList from "../../albums/albumsList/AlbumsList";
 import s from "./UserPage.module.css";
 
 class UserPage extends React.Component{
@@ -12,8 +13,8 @@ class UserPage extends React.Component{
                         status: ""
                      };
 
-        this.getPosts = this.getPosts.bind(this); // работает и без, почему?
-        this.getAlbum = this.getAlbums.bind(this);
+        this.getPosts = this.getPosts.bind(this); // работает и без bind, почему?
+        this.getAlbum = this.getAlbums.bind(this); // работает и без bind, почему?
     }
 
     async getPosts(id, status) {
@@ -47,9 +48,10 @@ class UserPage extends React.Component{
                         </div>
                         <div>
                             <button className={s.button} onClick={() => this.getPosts(this.props.userInfo.id, "posts")}>POST</button>
-                            <button className={s.button} onClick={() => this.getAlbums(this.props.userInfo.id, "album")}>ALBUM</button>
+                            <button className={s.button} onClick={() => this.getAlbums(this.props.userInfo.id, "albums")}>ALBUM</button>
                         </div>
-                    </div> : <PostsList posts={this.state.data} />
+                    </div> : 
+                        (this.state.status === "posts" ? <PostsList posts={this.state.data} /> : <AlbumsList albums={this.state.data} />)
                 }
             </div>
         )

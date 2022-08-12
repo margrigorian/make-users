@@ -1,0 +1,8 @@
+.photo{
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+    background-size: 100%;
+    background-position: center center;
+    cursor: pointer;
+}

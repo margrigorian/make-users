@@ -1,0 +1,15 @@
+.album{
+    width: 180px;
+    height: 260px;
+    margin-bottom: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: url("../../../pictures/House-MD-cover.png");
+    cursor: pointer;
+}
+.title{
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(255, 255, 255, .7);
+    margin-top: 60px;
+}

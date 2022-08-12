@@ -1,0 +1,19 @@
+.button{
+    position: absolute;
+    top: 290px;
+    right: 50px;
+    padding: 10px 68px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: large;
+    color: darkred;
+    font-family: Georgia, serif;
+    cursor: pointer;
+}
+.photosContainer{
+    margin: 110px auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1180px;
+    justify-content: space-between;
+}

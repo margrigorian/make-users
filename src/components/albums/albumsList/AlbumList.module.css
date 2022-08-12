@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.albumHead{
+    height: 260px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_fr_Dr_House.png");
+    background-size: 100%;
+    background-position: center 70%;
+    margin-bottom: 80px;
+}
+.headText{
+    position: absolute;
+    top: 240px;
+    left: 190px;
+    color: darkred;
+    font-family: Georgia, serif;
+    font-size: 30px;
+    /* padding: 240px 0px 0px 190px; */
+}
+.albumContainer{
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 1180px;
+    justify-content: space-between;
+}
+

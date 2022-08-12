@@ -1,0 +1,44 @@
+.backWindow{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(52, 51, 51, 0.9);
+}
+.modalWindow{
+    margin-top: 125px;
+    display: flex;
+    justify-content: center;
+}
+.photo{
+    width: 30%;
+    height: 60%;
+    background-size: 100% 100%;
+}
+.arrow{
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    top: 45%;
+}
+.leftArrow{
+    left: 30%;
+    background-image: url("../../../pictures/Arrow_left@2x.png");
+    background-size: 100%;
+}
+.rightArrow{
+    right: 30%;
+    background-image: url("../../../pictures/Arrow_right@2x.png");
+    background-size: 100%;
+}
+.close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+    right: 20%;
+    background-image: url("../../../pictures/Close@2x.png");
+    background-size: 100%;
+    cursor: pointer;
+}
