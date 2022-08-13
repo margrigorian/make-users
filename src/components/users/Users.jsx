@@ -8,12 +8,12 @@ class Users extends React.Component{
 
         this.state = {info: ""};
 
-        this.getUserId = this.getUserId.bind(this);
-        this.comeBack = this.comeBack.bind(this);
+        this.getUserInfo = this.getUserInfo.bind(this);
+        this.comeBack =  this.comeBack.bind(this);
     }
 
-    getUserId(info) {
-        this.setState({info});
+    getUserInfo(userInfo) {
+        this.setState({info: userInfo});
     }
 
     comeBack() {
@@ -23,7 +23,7 @@ class Users extends React.Component{
     render() {
         return (
             <div>
-                {this.state.info === "" ? <UsersList fn={this.getUserId} /> : <UserPage userInfo={this.state.info} fnComeBack={this.comeBack} />}
+                {this.state.info === "" ? <UsersList fn={this.getUserInfo} /> : <UserPage userInfo={this.state.info} fnComeBack={this.comeBack} />}
             </div>
         )
     }

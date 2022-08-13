@@ -62,7 +62,8 @@ class UserPage extends React.Component{
                             </div>
                         </div>
                     </div> : 
-                        (this.state.status === "posts" ? <PostsList posts={this.state.data} fnBackToUsers={this.props.fnComeBack} fnBackToUserPage={this.backToUserPage} /> : <AlbumsList albums={this.state.data} fnBackToUsers={this.props.fnComeBack} fnbackToUserPage={this.backToUserPage}/>)
+                        (this.state.status === "posts" ? <PostsList posts={this.state.data} fnBackToUsers={this.props.fnComeBack} fnBackToUserPage={this.backToUserPage} /> 
+                            : <AlbumsList albums={this.state.data} fnBackToUsers={this.props.fnComeBack} fnbackToUserPage={this.backToUserPage}/>)
                 }
             </div>
         )
