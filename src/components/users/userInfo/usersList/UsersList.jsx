@@ -1,6 +1,7 @@
 import React from "react";
 import request from "../../../lib/request";
 import User from "../user/User";
+import ModeContext from "../../../context/mode/modeContext";
 import s from "./UsersList.module.css";
 
 class UsersList extends React.Component {
@@ -17,11 +18,19 @@ class UsersList extends React.Component {
 
     render() {
         return (
-            <div className={s.container}>
-                {this.state.users.map(item => (
-                    <User key={`UserId-${item.id}`} user={item} fn={this.props.fn} />
-                ))}
-            </div>
+            <ModeContext.Consumer>
+                {
+                    (mode) => (
+                        <div className={s.body} style={{backgroundColor: mode === "night" ? "#420c0c" : undefined}}>
+                            <div className={s.container}>
+                                {this.state.users.map(item => (
+                                    <User key={`UserId-${item.id}`} user={item} fn={this.props.fn} />
+                                ))}
+                            </div>
+                        </div>
+                    )
+                }
+            </ModeContext.Consumer>
         )
     }
 }

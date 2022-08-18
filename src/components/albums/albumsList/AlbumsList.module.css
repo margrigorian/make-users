@@ -6,12 +6,12 @@
     height: 260px;
     background-image: url("https://upload.wikimedia.org/wikipedia/commons/1/1f/Logo_fr_Dr_House.png");
     background-size: 100%;
-    background-position: center 70%;
-    margin-bottom: 80px;
+    background-position: center 100%;
+    margin-bottom: 60px;
 }
 .headText{
     position: absolute;
-    top: 240px;
+    top: 270px;
     left: 190px;
     color: darkred;
     font-family: Georgia, serif;
@@ -19,7 +19,7 @@
     /* padding: 240px 0px 0px 190px; */
 }
 .albumContainer{
-    margin: 50px auto;
+    margin: 0px auto;
     display: flex;
     flex-wrap: wrap;
     width: 1180px;
@@ -27,7 +27,7 @@
 }
 
 .buttonContainer{
-    margin: 100px 0 0 30px;
+    margin: 80px 0 0 25px;
 }
 .buttonUsersContainer{
     margin-bottom: 10px;

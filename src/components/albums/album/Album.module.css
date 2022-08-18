@@ -4,8 +4,14 @@
     margin-bottom: 50px;
     padding: 10px;
     border-radius: 10px;
-    background-image: url("../../../pictures/House-MD-cover.png");
     cursor: pointer;
+}
+.imgForLightMode{
+    background-image: url("../../../pictures/House-MD-cover.png");
+}
+.imgForDarkMode{
+    background-image: url("https://csn.naekranie.pl/wp-content/uploads/2014/11/House-Pills-house-md-522056_1200_1720.jpg");
+    background-size: 100%;
 }
 .title{
     font-weight: bold;

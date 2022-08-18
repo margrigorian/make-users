@@ -5,9 +5,15 @@
 }
 .header{
     height: 320px;
-    background-image: url("https://mf-static-ssl.more.tv/images/Project/32776/OW1aHYGiS1Cg6TLY2Zs3LhXriUyZQ9yV0rvsfLXE.jpg");
     background-size: 100%;
     margin-bottom: 50px;
+}
+.headerLightImg{
+    background-image: url("https://mf-static-ssl.more.tv/images/Project/32776/OW1aHYGiS1Cg6TLY2Zs3LhXriUyZQ9yV0rvsfLXE.jpg");
+}
+.headerDarkImg{
+    background-image: url("https://cdn.wallpapersafari.com/83/91/NIlsLz.jpg");
+    background-position: center 30%;
 }
 .headerText{
     position: absolute;
@@ -17,13 +23,6 @@
     top: 220px;
     right: 50px;
 }
-.bigContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 50px 30px 50px;
-}
-
 .buttonContainer{
     margin: 150px 0 0 50px;
 }
@@ -46,4 +45,11 @@
     padding: 15px 24px;
     color: rgb(56, 129, 169);
     border: 1px solid rgb(56, 129, 169);
+}
+
+.bigContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 50px 30px 50px;
 }

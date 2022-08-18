@@ -6,7 +6,9 @@ class Users extends React.Component{
     constructor(props) {
         super(props);
 
-        this.state = {info: ""};
+        this.state = {
+                        info: ""
+                    };
 
         this.getUserInfo = this.getUserInfo.bind(this);
         this.comeBack =  this.comeBack.bind(this);
@@ -24,7 +26,7 @@ class Users extends React.Component{
         return (
             <div>
                 {this.state.info === "" ? <UsersList fn={this.getUserInfo} /> : <UserPage userInfo={this.state.info} fnComeBack={this.comeBack} />}
-            </div>
+            </div>   
         )
     }
 }

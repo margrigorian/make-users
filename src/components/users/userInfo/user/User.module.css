@@ -1,9 +1,14 @@
 .userContainer{
-    background-color: darkgrey;
     width: 145px;
     height: 155px;
     margin: 12px;
     cursor: pointer;
+}
+.backColorLight{
+    background-color: darkgrey;
+}
+.backColorDark{
+    background-color: rgb(26, 24, 24);
 }
 .userPhoto{
     width: 130px;
@@ -11,10 +16,17 @@
     border-bottom: 2px solid #800000;
     border-right:2px solid #800000;
 }
+.borderColor{
+    border-bottom: 2px solid grey;
+    border-right:2.2px solid grey;
+}
 .userName{
     text-align: right;
     padding: 12px 5px 0 0;
     font-family: sans-serif;
     font-size: 12px;
     color: #800000;
+}
+.nameColor{
+    color: grey;
 }
