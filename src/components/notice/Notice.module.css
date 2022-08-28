@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: center;
+    /* height: 100vh; */
+}
+.notice{
+    margin: 10% 0 25% 0;
+    padding: 10%;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+.lightMode{
+    background-color: black;
+    color: white;
+}
+.nightMode{
+    background-color: #420c0c;
+    color: white;
+}

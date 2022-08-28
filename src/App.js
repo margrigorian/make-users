@@ -8,6 +8,7 @@ import UsersList from './components/users/userInfo/usersList/UsersList';
 import UserPage from './components/users/userPage/UserPage';
 import PostsList from './components/posts/postsList/PostsList';
 import AlbumsList from './components/albums/albumsList/AlbumsList';
+import Notice from './components/notice/Notice';
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -36,6 +37,7 @@ function App() {
           <Route path='/userpage/:id' element={<UserPage />} />
           <Route path='/post/:id' element={<PostsList />} />
           <Route path='/album/:id' element={<AlbumsList />} />
+          <Route path='*' element={<Notice />} />
         </Routes>
       </ModeContext.Provider>
     </BrowserRouter>
