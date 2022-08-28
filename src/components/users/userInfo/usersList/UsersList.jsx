@@ -1,41 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import request from "../../../lib/request";
 import User from "../user/User";
 import ModeContext from "../../../context/mode/modeContext";
 import s from "./UsersList.module.css";
-
-// class UsersList1 extends React.Component {
-//     constructor(props) {
-//         super(props);
-
-//         this.state = {users: []};
-//     }
-
-//     async componentDidMount() {
-//         let libUsers = await request("GET", "https://jsonplaceholder.typicode.com/users");
-//         this.setState({users: libUsers});
-//     }
-
-//     render() {
-//         return (
-//             <ModeContext.Consumer>
-//                 {
-//                     (mode) => (
-//                         <div className={s.body} style={{backgroundColor: mode === "night" ? "#420c0c" : undefined}}>
-//                             <div className={s.container}>
-//                                 {this.state.users.map(item => (
-//                                     <User key={`UserId-${item.id}`} user={item} fn={this.props.fn} />
-//                                 ))}
-//                             </div>
-//                         </div>
-//                     )
-//                 }
-//             </ModeContext.Consumer>
-//         )
-//     }
-// }
+import Cards from "../../../cards/Cards";
 
 function UsersList(props) {
+    const mode = useContext(ModeContext);
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
@@ -46,22 +17,17 @@ function UsersList(props) {
 
         getUsers();
     }, [])
-    
 
     return (
-        <ModeContext.Consumer>
-            {
-                (mode) => (
-                    <div className={s.body} style={{backgroundColor: mode === "night" ? "#420c0c" : undefined}}>
-                        <div className={s.container}>
-                            {users.map(item => (
-                                <User key={`UserId-${item.id}`} user={item} fn={props.fn} />
-                            ))}
-                        </div>
-                    </div>
-                )
-            }
-        </ModeContext.Consumer>
+        <div className={s.body} style={{backgroundColor: mode === "night" ? "#420c0c" : undefined}}>
+            <div className={s.container}>
+                {users.map(item => (
+                    <Cards key={`UserId-${item.id}`}>
+                        <User user={item} fn={props.fn} fnGetUserId={props.fnGetUserId} />
+                    </Cards>
+                ))}
+            </div>
+        </div>
     )
 }
 

@@ -1,4 +1,4 @@
-.header{
+/* .header{
   display: flex;
   justify-content: right;
   padding: 1%;
@@ -70,4 +70,4 @@
 .button:active::after {
   transition: 0s;
   transform: translate(0, 5%);
-}
+} */

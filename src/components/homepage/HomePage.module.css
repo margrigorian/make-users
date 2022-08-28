@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.welcome{
+    margin-top: 17%;
+    font-size: 100px;
+    font-weight: bold;
+}

@@ -1,38 +1,17 @@
 import logo from './logo.svg';
-import s from './App.module.css';
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ModeContext from './components/context/mode/modeContext';
-import Users from './components/users/Users';
-
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-
-//     this.state = {mode: "light"};
-//   }
-
-//   changeMode() {
-//     if(this.state.mode === "light") {
-//         this.setState({mode: "night"});
-//     }else {
-//         this.setState({mode: "light"});
-//     }
-//   }
-
-//   render() {
-//     return (
-//       <ModeContext.Provider value={this.state.mode}>
-//         <header className={s.header} style={{backgroundColor: this.state.mode === "night" ? "#1a1818" : "#ebeaea"}}>
-//           <button className={s.button} role="button" onClick={() => this.changeMode()}>{this.state.mode === "night" ? "Light Mode" : "Night Mode"}</button>
-//         </header>
-//         <Users />
-//       </ModeContext.Provider>
-//     );
-//   }
-// }
+import NavBar from './components/navbar/NavBar';
+import HomePage from "./components/homepage/HomePage";
+import UsersList from './components/users/userInfo/usersList/UsersList';
+import UserPage from './components/users/userPage/UserPage';
+import PostsList from './components/posts/postsList/PostsList';
+import AlbumsList from './components/albums/albumsList/AlbumsList';
 
 function App() {
   const [mode, setMode] = useState("light");
+  const [userId, setUserId] = useState("");
 
   function changeMode() {
     if(mode === "light") {
@@ -42,13 +21,24 @@ function App() {
     }
   }
 
+  function getUserId(userId) {
+    setUserId(userId);
+  }
+
   return (
-    <ModeContext.Provider value={mode}>
-      <header className={s.header} style={{backgroundColor: mode === "night" ? "#1a1818" : "#ebeaea"}}>
-        <button className={s.button} onClick={() => changeMode()}>{mode === "night" ? "Light Mode" : "Night Mode"}</button>
-      </header>
-      <Users />
-    </ModeContext.Provider>
+    <BrowserRouter>
+      <ModeContext.Provider value={mode}>
+        <NavBar fnCnangeMode={changeMode} userId={userId} />
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/home' element={<HomePage />} />
+          <Route path='/users' element={<UsersList fnGetUserId={getUserId} />} />
+          <Route path='/userpage/:id' element={<UserPage />} />
+          <Route path='/post/:id' element={<PostsList />} />
+          <Route path='/album/:id' element={<AlbumsList />} />
+        </Routes>
+      </ModeContext.Provider>
+    </BrowserRouter>
   )
 }
 
