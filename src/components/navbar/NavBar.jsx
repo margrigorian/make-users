@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Navigate, NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import ModeContext from '../context/mode/modeContext';
 import style from "./NavBar.module.css";
 
